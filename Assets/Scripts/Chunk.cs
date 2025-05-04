@@ -28,7 +28,6 @@ public class Chunk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("FLOOR" + floor.name);
         floor.localScale = new Vector3(10f, 1f, ChunkLength);
 
     }

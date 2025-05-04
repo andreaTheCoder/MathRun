@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float RunnerSpeed =4;
+    public float RunnerSpeed = 4;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
