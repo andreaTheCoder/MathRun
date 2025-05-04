@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5070475797679407655}
   - component: {fileID: 151336725479743888}
+  - component: {fileID: 6012800762552846451}
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Untagged
@@ -320,6 +321,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChunkSpeed: 5
   ChunkLength: 0
+--- !u!114 &6012800762552846451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863753128830087923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd83f89d8391e499ab6c0c2371a12b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  LeftGateOp: 0
+  RightGateOp: 0
+  RightGateNum: 0
+  LeftGateNum: 0
+  RightGateText: {fileID: 1257319276221815066}
+  LeftGateText: {fileID: 5956053990374548072}
 --- !u!1 &3492967104539362411
 GameObject:
   m_ObjectHideFlags: 0
