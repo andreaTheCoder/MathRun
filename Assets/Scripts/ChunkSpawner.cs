@@ -8,9 +8,6 @@ public class ChunkSpawner : MonoBehaviour
 
     [SerializeField]
     private int chunkLength = 10;
-
-    // Start is calle
-    // d once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
@@ -20,7 +17,7 @@ public class ChunkSpawner : MonoBehaviour
         {
             GameObject obj = Instantiate(
                 chunkPrefab,
-                new Vector3(0, 0, i * chunkLength),
+                new Vector3(0, 0, i * -chunkLength),
                 Quaternion.identity
             );
 
@@ -29,6 +26,5 @@ public class ChunkSpawner : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update() { }
+
 }

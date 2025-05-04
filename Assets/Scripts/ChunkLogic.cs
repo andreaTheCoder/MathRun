@@ -1,13 +1,13 @@
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
-    public float ChunkSpeed;
-
     // Chunk length when it instantiates
     // Chunkspawner sets this value when it is spawned
-    public float chunkLength = 15;
+    public float chunkLength = 30;
+
+    [SerializeField]
+    private float moveSpeed = 0.5f;
 
     private Transform floor;
 
@@ -26,10 +26,20 @@ public class Chunk : MonoBehaviour
             Debug.LogWarning("Floor object not found in parent.");
         }
     }
+
     void Update()
     {
-        Debug.Log("FLOOR" + floor.name);
-        floor.localScale = new Vector3(10f, 1f, chunkLength);
+        // floor.localScale = new Vector3(10f, 1f, chunkLength);
 
+        // Move floor by moveSpeed
+
+        transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
+
+    }
+
+    // Delete chunks once out of view
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
