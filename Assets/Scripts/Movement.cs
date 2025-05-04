@@ -3,14 +3,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float RunnerSpeed;
-    [SerializeField] 
-    private GameObject runner; 
+    public float RunnerSpeed =4;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        runner = this.gameObject;
     }
 
     // Update is called once per frame
@@ -37,6 +34,6 @@ public class Movement : MonoBehaviour
                 z += RunnerSpeed;
 
             // Move the object in the x and y directions
-            runner.transform.position += new Vector3(x * Time.deltaTime, 0, z * Time.deltaTime);
+            transform.position += new Vector3(x * Time.deltaTime, 0, z * Time.deltaTime);
         }
     }
