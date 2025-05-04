@@ -4,10 +4,12 @@ using UnityEngine;
 public class Chunk : MonoBehaviour
 {
     public float ChunkSpeed;
-    public float ChunkLength = 15f;
+
+    // Chunk length when it instantiates
+    // Chunkspawner sets this value when it is spawned
+    public float chunkLength = 15;
 
     private Transform floor;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
     {
@@ -17,19 +19,17 @@ public class Chunk : MonoBehaviour
         if (floor != null)
         {
             // Set the scale of the floor based on ChunkLength
-            floor.localScale = new Vector3(10f, 1f, ChunkLength);
+            floor.localScale = new Vector3(10f, 1f, chunkLength);
         }
         else
         {
-        Debug.LogWarning("Floor object not found in parent.");
+            Debug.LogWarning("Floor object not found in parent.");
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         Debug.Log("FLOOR" + floor.name);
-        floor.localScale = new Vector3(10f, 1f, ChunkLength);
+        floor.localScale = new Vector3(10f, 1f, chunkLength);
 
     }
 }
