@@ -502,7 +502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd51b1261f74146e1b7ded15ea3a77c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runnerReference: {fileID: 1895881391}
+  RunnerSpeed: 0
+  runner: {fileID: 0}
 --- !u!136 &1895881393
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -602,6 +603,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 151336725479743888, guid: 75c61ad74969b4b68b1b902d3edd0b5c, type: 3}
+      propertyPath: ChunkLength
+      value: 21.73
+      objectReference: {fileID: 0}
     - target: {fileID: 2863753128830087923, guid: 75c61ad74969b4b68b1b902d3edd0b5c, type: 3}
       propertyPath: m_Name
       value: Chunk
