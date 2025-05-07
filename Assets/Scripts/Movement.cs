@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float RunnerSpeed =4;
+    [SerializeField]
+    private float RunnerSpeed = 4;
+    private GameObject runner;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,24 +18,25 @@ public class Movement : MonoBehaviour
         Move();
     }
 
-        public void Move()
-        {
-            float x = 0;
-            float z = 0;
+    public void Move()
+    {
+        float x = 0;
+        float z = 0;
 
-            // Left and Right movement
-            if (Input.GetKey(KeyCode.LeftArrow)) 
-                x += RunnerSpeed;
-            else if (Input.GetKey(KeyCode.RightArrow)) 
-                x -= RunnerSpeed;
+        // Left and Right movement
+        if (Input.GetKey(KeyCode.LeftArrow))
+            x += RunnerSpeed;
+        else if (Input.GetKey(KeyCode.RightArrow))
+            x -= RunnerSpeed;
 
-            // Up and Down movement
-            if (Input.GetKey(KeyCode.UpArrow)) 
-                z -= RunnerSpeed;
-            else if (Input.GetKey(KeyCode.DownArrow))
-                z += RunnerSpeed;
+        // Up and Down movement
+        if (Input.GetKey(KeyCode.UpArrow))
+            z -= RunnerSpeed;
+        else if (Input.GetKey(KeyCode.DownArrow))
+            z += RunnerSpeed;
 
-            // Move the object in the x and y directions
-            transform.position += new Vector3(x * Time.deltaTime, 0, z * Time.deltaTime);
-        }
+
+        // Move the object in the x and y directions
+        runner.transform.position += new Vector3(x * Time.deltaTime, 0, z * Time.deltaTime);
     }
+}
