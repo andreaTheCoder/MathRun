@@ -5,7 +5,8 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]
     private float RunnerSpeed = 4;
-
+    [SerializeField]
+    float xClamp = 5f;
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +23,6 @@ public class Movement : MonoBehaviour
             x += RunnerSpeed;
         else if (Input.GetKey(KeyCode.RightArrow))
             x -= RunnerSpeed;
-
         // Up and Down movement
         if (Input.GetKey(KeyCode.UpArrow))
             z -= RunnerSpeed;
@@ -31,5 +31,8 @@ public class Movement : MonoBehaviour
 
         // Move the object in the x and y directions
         transform.position += new Vector3(x * Time.deltaTime, 0, z * Time.deltaTime);
+        Vector3 newPosition = transform.position;
+        newPosition.x = Mathf.Clamp(newPosition.x, -xClamp, xClamp);
+        transform.position = newPosition;
     }
 }
