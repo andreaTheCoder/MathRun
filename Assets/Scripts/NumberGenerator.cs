@@ -21,16 +21,16 @@ public class NumberGenerator : MonoBehaviour
     int RightGateNum;
     int LeftGateNum;
     [SerializeField]
-    TextMeshProUGUI RightGateText;
+    TextMeshPro RightGateText;
     [SerializeField]
-    TextMeshProUGUI LeftGateText;
+    TextMeshPro LeftGateText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        LeftGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS+1);
-        RightGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS+1);
-        LeftGateNum = Random.Range(1, range+1);
-        RightGateNum = Random.Range(1, range+1);
+        LeftGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS + 1);
+        RightGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS + 1);
+        LeftGateNum = Random.Range(1, range + 1);
+        RightGateNum = Random.Range(1, range + 1);
         LeftGateText.text = numberFormator(LeftGateOp, LeftGateNum);
         RightGateText.text = numberFormator(RightGateOp, RightGateNum);
     }
@@ -38,7 +38,7 @@ public class NumberGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     string numberFormator(operations operation, int num)
     {

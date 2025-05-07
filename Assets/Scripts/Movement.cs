@@ -3,12 +3,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float RunnerSpeed = 4;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
+    [SerializeField]
+    private float RunnerSpeed = 4;
 
     // Update is called once per frame
     void Update()
