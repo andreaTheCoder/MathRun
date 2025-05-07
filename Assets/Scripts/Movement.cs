@@ -4,7 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
-    private float RunnerSpeed = 2;
+    private float RunnerSpeed = 4;
     private GameObject runner;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

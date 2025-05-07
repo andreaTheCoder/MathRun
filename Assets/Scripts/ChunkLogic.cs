@@ -7,7 +7,7 @@ public class Chunk : MonoBehaviour
     public float chunkLength = 30;
 
     [SerializeField]
-    private float moveSpeed = 0.5f;
+    private float moveSpeed = 3f;
 
     private Transform floor;
 

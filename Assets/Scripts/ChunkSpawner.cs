@@ -7,7 +7,7 @@ public class ChunkSpawner : MonoBehaviour
     private GameObject chunkPrefab;
 
     [SerializeField]
-    private int chunkLength = 10;
+    private int ChunkLength = 30;
     void Start()
     {
 
@@ -17,11 +17,11 @@ public class ChunkSpawner : MonoBehaviour
         {
             GameObject obj = Instantiate(
                 chunkPrefab,
-                new Vector3(0, 0, i * -chunkLength),
+                new Vector3(0, 0, i * -ChunkLength),
                 Quaternion.identity
             );
 
-            obj.GetComponent<Chunk>().chunkLength = chunkLength;
+            obj.GetComponent<Chunk>().chunkLength = ChunkLength;
         }
 
     }
