@@ -4,7 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
-    private float RunnerSpeed = 4;
+    private float RunnerSpeed = 8;
     [SerializeField]
     float xClamp = 5f;
     // Update is called once per frame

@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199bcf14eb04144adaab467744be9537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkLength: 30
-  moveSpeed: 3
+  chunkLength: 45
+  moveSpeed: 22.36
 --- !u!114 &6012800762552846451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,6 +422,7 @@ GameObject:
   - component: {fileID: 1050869303781338608}
   - component: {fileID: 3561851604848885352}
   - component: {fileID: 7213855923898725091}
+  - component: {fileID: 2229336087678232425}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -518,6 +519,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2229336087678232425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606582753344120111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9f80e9eda74c96b0f7a2552729ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7749424414937931123
 GameObject:
   m_ObjectHideFlags: 0

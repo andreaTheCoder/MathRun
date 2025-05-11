@@ -27,21 +27,17 @@ public class NumberGenerator : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        LeftGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS + 1);
-        RightGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS + 1);
+        LeftGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS);
+        RightGateOp = (operations)Random.Range(0, NUMBEROFOPERATIONS);
         LeftGateNum = Random.Range(1, range + 1);
         RightGateNum = Random.Range(1, range + 1);
         LeftGateText.text = numberFormator(LeftGateOp, LeftGateNum);
         RightGateText.text = numberFormator(RightGateOp, RightGateNum);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     string numberFormator(operations operation, int num)
     {
+        Debug.Log("number Formatter recieved number: " + num);
         string formattedString = "";
         if (operation == operations.add)
             formattedString += "+";

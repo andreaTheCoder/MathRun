@@ -4,10 +4,10 @@ public class Chunk : MonoBehaviour
 {
     // Chunk length when it instantiates
     // Chunkspawner sets this value when it is spawned
-    public float chunkLength = 30;
+    public float chunkLength = 45;
 
     [SerializeField]
-    private float moveSpeed = 3f;
+    private float moveSpeed = 20f;
 
     private Transform floor;
 
@@ -34,12 +34,9 @@ public class Chunk : MonoBehaviour
         // Move floor by moveSpeed
 
         transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
-
-    }
-
-    // Delete chunks once out of view
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
+        if (transform.position.z > chunkLength)
+        {
+            Destroy(gameObject);
+        }
     }
 }
