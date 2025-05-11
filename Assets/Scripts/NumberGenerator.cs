@@ -1,7 +1,4 @@
-using System.Collections;
-using Mono.Cecil;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class NumberGenerator : MonoBehaviour
@@ -14,16 +11,20 @@ public class NumberGenerator : MonoBehaviour
         divide,
         subtract,
     };
+
     public int range = 10;
     public const int NUMBEROFOPERATIONS = 4;
     operations LeftGateOp;
     operations RightGateOp;
     int RightGateNum;
     int LeftGateNum;
+
     [SerializeField]
     TextMeshPro RightGateText;
+
     [SerializeField]
     TextMeshPro LeftGateText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

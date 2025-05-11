@@ -7,7 +7,7 @@ public class Chunk : MonoBehaviour
     public float chunkLength = 45;
 
     [SerializeField]
-    private float moveSpeed = 20f;
+    private const float moveSpeed = 20f;
 
     private Transform floor;
 
@@ -29,13 +29,17 @@ public class Chunk : MonoBehaviour
 
     void Update()
     {
-        // floor.localScale = new Vector3(10f, 1f, chunkLength);
-
-        // Move floor by moveSpeed
 
         transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
         if (transform.position.z > chunkLength)
         {
+            ChunkSpawner chunkSpawner = GameObject
+            .Find("Chunk Spawner")
+            .GetComponent<ChunkSpawner>();
+            chunkSpawner.chunks.Remove(gameObject);
+
+            chunkSpawner.LoadChunks(1);
+
             Destroy(gameObject);
         }
     }
