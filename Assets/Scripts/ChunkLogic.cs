@@ -29,13 +29,12 @@ public class Chunk : MonoBehaviour
 
     void Update()
     {
-
         transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
         if (transform.position.z > chunkLength)
         {
             ChunkSpawner chunkSpawner = GameObject
-            .Find("Chunk Spawner")
-            .GetComponent<ChunkSpawner>();
+                .Find("Chunk Spawner")
+                .GetComponent<ChunkSpawner>();
             chunkSpawner.chunks.Remove(gameObject);
 
             chunkSpawner.LoadChunks(1);
